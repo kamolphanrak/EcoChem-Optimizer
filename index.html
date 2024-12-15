@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoChem Optimizer</title>
+    <link rel="stylesheet" href="style.css"> <!-- เชื่อมโยงไปยังไฟล์ CSS -->
+</head>
+<body>
+    <header>
+        <h1>EcoChem Optimizer</h1>
+        <p>เว็บไซต์สำหรับวิเคราะห์ผลกระทบด้านสิ่งแวดล้อมของกระบวนการเคมี</p>
+    </header>
+
+    <section id="form-section">
+        <h2>กรอกข้อมูลกระบวนการเคมี</h2>
+        <form id="process-form">
+            <label for="input-amount">ปริมาณสารตั้งต้น (กิโลกรัม):</label>
+            <input type="number" id="input-amount" name="input-amount" required><br>
+
+            <label for="energy-usage">พลังงานที่ใช้ (kWh):</label>
+            <input type="number" id="energy-usage" name="energy-usage" required><br>
+
+            <label for="co2-emission">การปล่อย CO₂ (กิโลกรัม):</label>
+            <input type="number" id="co2-emission" name="co2-emission" required><br>
+
+            <button type="button" onclick="calculateImpact()">คำนวณ</button>
+        </form>
+    </section>
+
+    <section id="result-section">
+        <h2>ผลการคำนวณ</h2>
+        <p id="output"></p>
+    </section>
+
+    <section id="comparison-section">
+        <h2>กราฟเปรียบเทียบวิธีการผลิต</h2>
+        <canvas id="comparison-chart"></canvas> <!-- แสดงกราฟที่นี่ -->
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- ใช้ Chart.js จาก CDN -->
+    <script src="script.js"></script> <!-- เชื่อมโยงไปยังไฟล์ JavaScript -->
+</body>
+</html>
